@@ -1,6 +1,7 @@
 import { json } from "@remix-run/node";
 import type { Route } from "./+types/home";
 import { useLoaderData } from "react-router";
+import logo from "../client/assets/images/terra-finance-edu-logo.png";
 
 export function meta({}: Route.MetaArgs) {
   const title =
@@ -175,6 +176,11 @@ export default function Home({}: Route.ComponentProps) {
           <div className="flex flex-col items-start gap-10 md:flex-row md:items-center md:justify-between">
             <div className="max-w-2xl">
               <h1 className="text-4xl font-extrabold leading-tight tracking-tight text-white md:text-5xl">
+                <img
+                  src={logo}
+                  alt="Terra Finance Edu"
+                  className="inline h-10 w-10 mr-3 mb-2"
+                />
                 Learn personal finance with{" "}
                 <span className="bg-gradient-to-r from-teal-300 via-cyan-200 to-white bg-clip-text text-transparent">
                   clear lessons & tools
